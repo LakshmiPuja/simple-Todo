@@ -51,12 +51,13 @@ class SampleTodo extends Component {
   }
 
   render() {
+    const {todoDetails} = this.state
     return (
       <div className="bg-container">
         <div className="card">
           <h1 className="heading">Simple Todos</h1>
           <ul className="list-item">
-            {initialTodosList.map(eachTodo => (
+            {todoDetails.map(eachTodo => (
               <TodoItem
                 todoDetail={eachTodo}
                 key={eachTodo.id}
